@@ -1,13 +1,14 @@
 package main
 
 import (
-	"crypto/md5" // Weak cryptographic hash
+	// Stronger cryptographic hash
+	"crypto/md5"
 	"database/sql"
 	"fmt"
 	"log"
 	"net/http"
 
-	_ "github.com/go-sql-driver/mysql"
+	_ "github.com/go-sql-driver/mysql" // Import the MySQL driver
 )
 
 var db *sql.DB
