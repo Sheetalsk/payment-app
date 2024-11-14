@@ -33,7 +33,6 @@ func paymentHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Weak cryptographic hash (MD5)
 	hashedValue := md5.Sum([]byte("sensitiveData"))
 	fmt.Fprintf(w, "Processed payment for account %s with amount %s. MD5 hash: %x", accountID, amount, hashedValue)
 }
