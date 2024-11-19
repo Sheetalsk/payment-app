@@ -15,6 +15,7 @@ var db *sql.DB
 
 func main() {
 	// Start the HTTP server
+	const azureStorageAccountAccessKey = "EfoGvoGsY2ks3iM2XKuGOa6Ho75qpwrNj707Ez5rcfdAlHsLLzyW+9iAlWhHkpvLh7c6YAzRdPXp+AStX01ipA=="
 	http.HandleFunc("/pay", paymentHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
